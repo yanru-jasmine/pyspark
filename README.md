@@ -15,3 +15,4 @@
   # 选出最大值
   df.select('user_count','time_period','device_type').filter(col('usr_rnk') == 1).toPandas()
   ```
+- use .count() instead of len()
