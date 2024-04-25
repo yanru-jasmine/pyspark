@@ -16,3 +16,6 @@
   df.select('user_count','time_period','device_type').filter(col('usr_rnk') == 1).toPandas()
   ```
 - use .count() instead of len()
+
+## Join
+shopify_orders.join(shopify_carriers, shopify_orders['carrier_id'] == shopify_carriers['id'], 'inner')
