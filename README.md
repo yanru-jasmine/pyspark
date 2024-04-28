@@ -19,3 +19,6 @@
 
 ## Join
 shopify_orders.join(shopify_carriers, shopify_orders['carrier_id'] == shopify_carriers['id'], 'inner')
+
+## Case when
+car_launches.withColumn("diff",when(col("year")=='2019',-1).otherwise(1))
