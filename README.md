@@ -25,3 +25,10 @@ car_launches.withColumn("diff",when(col("year")=='2019',-1).otherwise(1))
 
 ## Date Format
 df.withColumn('month',date_format(col('created_at'),'yyyy-MM'))  --- the same with SQL date_format(created_at,'%Y-%m)
+
+
+
+## Python vs. sql vs. spark
+(1) SQL: case when
+python: def + apply lambda
+pyspark: when(,).when(,).otherwise()
