@@ -17,3 +17,8 @@
 - mysql: ceiling()
 - python: math.ceil()
 - pyspark: F.ceil()
+
+# filter
+- mysql: where age =100
+- python: df[df['age']==100]
+- pyspark: where("age==100")
